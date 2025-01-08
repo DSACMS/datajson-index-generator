@@ -4,7 +4,7 @@ import argparse
 import os
 
 from typing import Dict, Optional
-from github import Github, Repository, UnknownObjectException, GithubException
+from github import Github, Repository, GithubException
 
 class IndexGenerator:
     def __init__(self, agency: str, verison: str, token: Optional[str] = None,):
@@ -23,9 +23,6 @@ class IndexGenerator:
     def get_code_json(self, repo: Repository) -> Optional[Dict]:
         try:
             content = repo.get_contents("code.json", ref = "main")
-        except UnknownObjectException:
-            print("Unknown object has been found")
-            return None
         except GithubException:
             print("Problem with GitHub")
             return None
