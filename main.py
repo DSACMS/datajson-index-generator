@@ -23,15 +23,15 @@ class IndexGenerator:
     def get_code_json(self, repo: Repository) -> Optional[Dict]:
         try:
             content = repo.get_contents("code.json", ref = "main")
-        except GithubException:
-            print("Problem with GitHub")
+        except GithubException as e:
+            print(f"GitHub Error: {e.data.get('message', 'No message available')}")
             return None
 
         try:
             decoded_content = base64.b64decode(content.content)
             return json.loads(decoded_content)
-        except (json.JSONDecodeError, ValueError):
-            print(f"Invalid JSON in {repo.full_name}")
+        except (json.JSONDecodeError, ValueError) as e:
+            print(f"JSON Error: {str(e)}")
             return None
 
     def update_index(self, index: Dict, code_json: Dict, org_name: str, repo_name: str) -> None:
@@ -57,10 +57,10 @@ class IndexGenerator:
                 
                 code_json = self.get_code_json(repo)
                 if code_json:
-                    print(f"Found code.json in {repo.name}")
+                    print(f"✅ Found code.json in {repo.name}")
                     self.update_index(self.index, code_json, org_name, repo.name)
                 else:
-                    print(f"No code.json found in {repo.name}")
+                    print(f"❌ No code.json found in {repo.name}")
                     
         except GithubException as e:
             print(f"Error processing organization {org_name}: {str(e)}")
@@ -75,9 +75,9 @@ class IndexGenerator:
 def main():
     parser = argparse.ArgumentParser(
         description = "Create an index of code.json files within agency organizations for code.gov compliance.",
-        epilog = "Examples:\n"
-               "  python script.py --agency DOE --orgs 'org1,org2' --output agency_code.json\n"
-               "  python script.py --agency NASA --orgs 'nasa,nasa-gov' --version 2.0.0"
+        epilog = "Examples:"
+               "  python script.py --agency CMS --orgs 'org1,org2' --output code.json --OR-- "
+               "  python script.py --agency TTS --orgs 'GSA,USDC' --version 2.0.0"
     )
 
     parser.add_argument(
