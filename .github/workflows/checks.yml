@@ -55,6 +55,4 @@ jobs:
 
           # The default token is the repolinter token for the DSACMS org
           # You can change it if needed.
-          {% raw %}
           token: ${{ secrets.REPOLINTER_AUTO_TOKEN }}
-          {% endraw %}
