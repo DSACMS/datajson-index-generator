@@ -8,20 +8,23 @@ jobs:
   resolve-repolinter-json:
     uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@main
     with: 
-      url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+      url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
   
   repolinter-checks:
-    name: Tier 2 Checks
+    name: Tier 4 Checks
     needs: resolve-repolinter-json
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     env:
-      
+      {% raw %}
       RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json }}
-      
+      {% endraw %}
     steps:
       - uses: actions/checkout@v4
       - run: echo $RAW_JSON > repolinter.json
-      - uses: newrelic/repolinter-action@v1
+      - uses: DSACMS/repolinter-action@main
         with:
           # A path to the JSON/YAML Repolinter ruleset to use, relative to the workflow
           # working directory (i.e. under `$GITHUB_WORKSPACE`).
@@ -41,7 +44,7 @@ jobs:
           #   non-intrusive notification.
           #
           # Default: "exit-code"
-          output_type: 'issue'
+          output_type: 'pull-request'
 
           # The title to use for the issue created by repolinter-action. This title
           # should indicate the purpose of the issue, as well as that it was created by
@@ -50,10 +53,10 @@ jobs:
           # This option will be ignored if output_type != "issue".
           #
           # Default: "[Repolinter] Open Source Policy Issues"
-          output_name: '[Repolinter] Tier 2 Repository Hygiene Issue'
+          pull_request_labels: 'repolinter, cms-oss, cms-gov'
 
           # The default token is the repolinter token for the DSACMS org
           # You can change it if needed.
-          
+          {% raw %}
           token: ${{ secrets.REPOLINTER_AUTO_TOKEN }}
-          
+          {% endraw %}
