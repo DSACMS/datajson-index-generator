@@ -18,9 +18,7 @@ jobs:
       contents: write
       pull-requests: write
     env:
-      {% raw %}
       RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json }}
-      {% endraw %}
     steps:
       - uses: actions/checkout@v4
       - run: echo $RAW_JSON > repolinter.json
