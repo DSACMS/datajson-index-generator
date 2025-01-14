@@ -41,7 +41,8 @@ The following guide is for members of the project team who have access to the re
 ### Prerequisites
 
 - Python 3.x
-- GitHub API access token (optional, but recommended for higher rate limits)
+- GitHub Personal Access Token (optional, but highly recommended for higher rate limits)
+> **_Create a PAT:_** GitHub -> Settings -> Developer Settings -> Personal Access Tokens
 
 ### Installation
 
@@ -56,10 +57,11 @@ cd codejson-index-generator
 pip install PyGithub
 ```
 
-3. Set up your GitHub API token _(optional but recommended)_:
+1. Set up your GitHub Personal Access Token:
 ```bash
 export GITHUB_KEY="your-token-here"
 ```
+> **_NOTE:_**  _Use of GitHub PAT is highly recommened due to rate limiting._
 
 ### Usage
 
@@ -69,7 +71,7 @@ The script can be run from the command line with the following options:
 python main.py --agency AGENCY_NAME --orgs "org1,org2" --output code.json --version VERSION_NUMBER
 ```
 
-_Seperate organizations by comma without any spaces!_
+> **_NOTE:_**  _Seperate organizations by comma without any spaces!_
 
 ##### Required arguments:
 - `--agency`: The name of your agency
@@ -81,9 +83,8 @@ _Seperate organizations by comma without any spaces!_
 
 ##### Example:
 ```bash
-python main.py --agency CMS --orgs "DSACMS,CMSgov,CMS-Enterprise" --output code.json --version 1.0.0
+python3 main.py --agency CMS --orgs "DSACMS,CMSgov,CMS-Enterprise" --output code.json --version 1.0.0
 ```
-_The "python" keyword may be different depending on what version you have installed. (e.g. python3)_
 
 ## Coding Style and Linters
 
