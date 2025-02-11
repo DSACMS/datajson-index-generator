@@ -1,16 +1,12 @@
 {
   "name": "codejson-index-generator",
-  "description": {
-    "en": {
-      "shortDescription": "Script to create an indexed code.json for agencies.",
-      "longDescription": "The GitHub Code.json Index Generator is a Python-based tool that helps federal agencies compile and maintain their code.json files for code.gov compliance. It automatically scans specified GitHub organizations, finds repositories containing code.json files, and combines them into a single indexed file."
-    }
-  },
+  "description": "Script to create an indexed code.json",
+  "longDescription": ""The GitHub Code.json Index Generator is a Python-based tool that helps federal agencies compile and maintain their code.json files for code.gov compliance. It automatically scans specified GitHub organizations, finds repositories containing code.json files, and combines them into a single indexed file."",
   "status": "production",
   "permissions": {
     "licenses": [
       {
-        "URL": "LICENSE",
+        "URL": "https://github.com/DSACMS/codejson-index-generator/blob/main/LICENSE",
         "name": "CC0-1.0"
       }
     ],
@@ -19,7 +15,7 @@
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/codejson-index-generator",
   "vcs": "git",
-  "laborHours": 1181.19,
+  "laborHours": 2764,
   "platforms": [
     "mac"
   ],
@@ -29,13 +25,13 @@
   ],
   "softwareType": "standalone/desktop",
   "languages": [
-    "python"
+    "Python"
   ],
   "maintenance": "internal",
   "date": {
-    "created": "2025-01-07T16:26:42-05:00",
-    "lastModified": "2025-01-08T22:28:21+0000",
-    "metadataLastUpdated": "2025-01-08T22:28:21+0000"
+    "created": "2025-01-07T21:26:42Z",
+    "lastModified": "2025-02-11T21:19:29Z",
+    "metaDataLastUpdated": "2025-02-11T21:20:49.144Z"
   },
   "tags": [
     "codejson",
@@ -47,13 +43,13 @@
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Program Office"
   },
-  "localisation": "false",
-  "repoType": "Tools",
-  "userInput": "Yes",
+  "localisation": false,
+  "repositoryType": "Tools",
+  "userInput": true,
   "fismaLevel": "Low",
-  "group": "DSAC",
+  "group": "CMS/OA/DSAC",
   "subsetInHealthcare": "Operational",
   "userType": "Government",
-  "repositoryHost": "Github.com",
-  "maturityModelTier": "1"
+  "repositoryHost": "github.com/DSACMS",
+  "maturityModelTier": 3,
 }
