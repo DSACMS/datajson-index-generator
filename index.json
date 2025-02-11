@@ -1,0 +1,194 @@
+{
+  "agency": "CMS",
+  "version": "1.0.0",
+  "measurementType": {
+    "method": "projects"
+  },
+  "releases": [
+    {
+      "organization": "Centers for Medicare & Medicaid Services",
+      "name": "codejson-index-generator",
+      "description": {
+        "en": {
+          "shortDescription": "Script to create an indexed code.json for agencies.",
+          "longDescription": "The GitHub Code.json Index Generator is a Python-based tool that helps federal agencies compile and maintain their code.json files for code.gov compliance. It automatically scans specified GitHub organizations, finds repositories containing code.json files, and combines them into a single indexed file."
+        }
+      },
+      "status": "production",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "LICENSE",
+            "name": "CC0-1.0"
+          }
+        ],
+        "usageType": "openSource"
+      },
+      "repositoryURL": "https://github.com/DSACMS/codejson-index-generator",
+      "vcs": "git",
+      "laborHours": 1181.19,
+      "platforms": [
+        "mac"
+      ],
+      "categories": [
+        "compliance-management",
+        "data-collection"
+      ],
+      "softwareType": "standalone/desktop",
+      "languages": [
+        "python"
+      ],
+      "maintenance": "internal",
+      "date": {
+        "created": "2025-01-07T16:26:42-05:00",
+        "lastModified": "2025-01-08T22:28:21+0000",
+        "metadataLastUpdated": "2025-01-08T22:28:21+0000"
+      },
+      "tags": [
+        "codejson",
+        "index",
+        "generator",
+        "tools"
+      ],
+      "contact": {
+        "email": "opensource@cms.hhs.gov",
+        "name": "CMS Open Source Program Office"
+      },
+      "localisation": "false",
+      "repoType": "Tools",
+      "userInput": "Yes",
+      "fismaLevel": "Low",
+      "group": "DSAC",
+      "subsetInHealthcare": "Operational",
+      "userType": "Government",
+      "repositoryHost": "Github.com",
+      "maturityModelTier": "1"
+    },
+    {
+      "organization": "Centers for Medicare & Medicaid Services",
+      "name": "repodive-tools",
+      "description": {
+        "en": {
+          "shortDescription": "Scripts and tools to gather information about git repositories.",
+          "longDescription": "This repository is a collection of scripts and tools for a given repodiving effort. Repodiving in this context means going through a git repository and gathering relevant information for a specific purpose."
+        }
+      },
+      "status": "production",
+      "permissions": {
+        "licenses": [
+          {
+            "URL": "LICENSE",
+            "name": "CC0-1.0"
+          }
+        ]
+      },
+      "repositoryURL": "https://github.com/DSACMS/repodive-tools",
+      "vcs": "git",
+      "laborHours": null,
+      "platforms": [
+        "mac"
+      ],
+      "categories": [
+        "data-collection,data-analytics"
+      ],
+      "softwareType": "standalone/backend",
+      "languages": [
+        "bash,python"
+      ],
+      "maintenance": "internal",
+      "date": {
+        "created": "2024-07-30T11:54:17-05:00",
+        "lastModified": "2024-10-22T22:00:58+0000",
+        "metadataLastUpdated": "2024-10-22T22:00:58+0000"
+      },
+      "tags": [
+        "git,repository,scripts,repodiving"
+      ],
+      "contact": {
+        "email": "opensource@cms.hhs.gov",
+        "name": "CMS Open Source Program Office"
+      },
+      "localisation": "false",
+      "repoType": "Tools",
+      "userInput": "Yes",
+      "fismaLevel": "Low",
+      "group": "DSAC",
+      "subsetInHealthcare": "Operational",
+      "userType": "Government",
+      "repositoryHost": "Github.com",
+      "maturityModelTier": "1"
+    },
+    {
+      "organization": "DSACMS",
+      "name": "dedupliFHIR",
+      "projectType": "Tools",
+      "userInput": "Yes",
+      "fismaLevel": "Moderate",
+      "group": "CMS/OA/DSAC",
+      "subsetInHealthcare": "Operational",
+      "userType": "Providers",
+      "repositoryHost": "Github.com",
+      "maturityModelTier": "3"
+    },
+    {
+      "organization": "DSACMS",
+      "name": "metrics",
+      "projectType": "Website",
+      "userInput": "No",
+      "fismaLevel": "Low",
+      "group": "CMS/OA/DSAC",
+      "subsetInHealthcare": "Operational",
+      "userType": "Government",
+      "repositoryHost": "Github.com",
+      "maturityModelTier": "3"
+    },
+    {
+      "organization": "DSACMS",
+      "name": "mural-ollama",
+      "project_type": "Apps",
+      "user_input": "Yes",
+      "project_fisma_level": "Moderate",
+      "group": "CMS/OA/DSAC",
+      "subset_in_healthcare": "Operational",
+      "user_type": "Government",
+      "repository_host": "Github.com",
+      "maturity_model_tier": "1"
+    },
+    {
+      "organization": "DSACMS",
+      "name": "open",
+      "projectType": "Website",
+      "userInput": "No",
+      "fismaLevel": "Low",
+      "group": "CMS/OA/DSAC",
+      "subsetInHealthcare": "Operational",
+      "userType": "Government",
+      "repositoryHost": "Github.com",
+      "maturityModelTier": "2"
+    },
+    {
+      "organization": "DSACMS",
+      "name": "repo-scaffolder",
+      "projectType": "Tools",
+      "userInput": "No",
+      "fismaLevel": "Low",
+      "group": "CMS/OA/DSAC",
+      "subsetInHealthcare": "Operational",
+      "userType": "Government",
+      "repositoryHost": "Github.com",
+      "maturityModelTier": "3"
+    },
+    {
+      "organization": "DSACMS",
+      "name": "reverse-scorecard-generation",
+      "project_type": "Tools",
+      "user_input": "Yes",
+      "project_fisma_level": "Moderate",
+      "group": "CMS/OA/DSAC",
+      "subset_in_healthcare": "Operational",
+      "user_type": "Government",
+      "repository_host": "Github.com",
+      "maturity_model_tier": "1"
+    }
+  ]
+}
