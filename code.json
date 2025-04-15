@@ -1,0 +1,55 @@
+{
+  "name": "codejson-index-generator",
+  "description": "Script to create an indexed code.json",
+  "longDescription": "The GitHub Code.json Index Generator is a Python-based tool that helps federal agencies compile and maintain their code.json files for code.gov compliance. It automatically scans specified GitHub organizations, finds repositories containing code.json files, and combines them into a single indexed file.",
+  "status": "production",
+  "permissions": {
+    "licenses": [
+      {
+        "URL": "https://github.com/DSACMS/codejson-index-generator/blob/main/LICENSE",
+        "name": "CC0-1.0"
+      }
+    ],
+    "usageType": "openSource"
+  },
+  "organization": "Centers for Medicare & Medicaid Services",
+  "repositoryURL": "https://github.com/DSACMS/codejson-index-generator",
+  "vcs": "git",
+  "laborHours": 2764,
+  "platforms": [
+    "mac"
+  ],
+  "categories": [
+    "compliance-management",
+    "data-collection"
+  ],
+  "softwareType": "standalone/desktop",
+  "languages": [
+    "Python"
+  ],
+  "maintenance": "internal",
+  "date": {
+    "created": "2025-01-07T21:26:42Z",
+    "lastModified": "2025-02-11T21:19:29Z",
+    "metaDataLastUpdated": "2025-02-11T21:20:49.144Z"
+  },
+  "tags": [
+    "codejson",
+    "index",
+    "generator",
+    "tools"
+  ],
+  "contact": {
+    "email": "opensource@cms.hhs.gov",
+    "name": "CMS Open Source Program Office"
+  },
+  "localisation": false,
+  "repositoryType": "Tools",
+  "userInput": true,
+  "fismaLevel": "Low",
+  "group": "CMS/OA/DSAC",
+  "subsetInHealthcare": "Operational",
+  "userType": "Government",
+  "repositoryHost": "github.com/DSACMS",
+  "maturityModelTier": 3
+}
