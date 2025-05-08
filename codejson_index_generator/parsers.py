@@ -4,7 +4,8 @@ import argparse
 import os
 
 from typing import Dict, Optional
-from github import Github, Repository, GithubException
+from github import Github, Repository, GithubException, Organization
+
 
 class IndexGenerator:
     def __init__(self, agency: str, verison: str, token: Optional[str] = None,):
@@ -33,6 +34,18 @@ class IndexGenerator:
         except (json.JSONDecodeError, ValueError) as e:
             print(f"JSON Error: {str(e)}")
             return None
+    
+    def save_code_json(self, repo: Repository, output_path: str) -> Optional[str]:
+        
+        res = self.get_code_json(repo)
+
+        if res:
+            with open(output_path, 'w') as f:
+                json.dump(res, f, indent=2)
+        else:
+            print(f"Error getting codejson file!")
+        
+        return res
 
     def update_index(self, index: Dict, code_json: Dict, org_name: str, repo_name: str) -> None:
         baseline = {
@@ -44,13 +57,35 @@ class IndexGenerator:
     
         index['releases'].append(baseline)
 
-    def process_organization(self, org_name: str) -> None:
+    def get_org_repos(self, org_name: str) -> list[Organization]:
         try:
             org = self.github.get_organization(org_name)
             print(f"\nProcessing organization: {org_name}")
 
             total_repos = org.public_repos
             print(f"Found {total_repos} public repositories")
+
+            return total_repos
+        except GithubException as e:
+            raise e
+
+    def save_organization_files(self, org_name: str, codeJSONPath) -> None:
+        try:
+            org = self.github.get_organization(org_name)
+            total_repos = self.get_org_repos(org_name)
+
+            for id, repo in enumerate(org.get_repos(type='public'), 1):
+                print(f"\n Saving codeJSON for {repo.name} [{id}/{total_repos}]")
+
+                repoPath = os.path.join(codeJSONPath, (repo.name + '.json')) 
+                code_json = self.save_code_json(repo,repoPath)
+        except GithubException as e:
+            print(f"Error processing organization {org_name}: {str(e)}")
+
+    def process_organization(self, org_name: str) -> None:
+        try:
+            org = self.github.get_organization(org_name)
+            total_repos = self.get_org_repos(org_name)
             
             for id, repo in enumerate(org.get_repos(type='public'), 1):
                 print(f"\nChecking {repo.name} [{id}/{total_repos}]")
