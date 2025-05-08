@@ -2,7 +2,7 @@
 name = "codejson-index-generator"
 version = "1.0.0"
 description = "Script to create an indexed code.json for agencies."
-authors = ["Sachin Panyil <sachinpanayil01@gmail.com>"]
+authors = ["Sachin Panayil <sachinpanayil01@gmail.com>"]
 license = "CC0 1.0"
 readme = "README.md"
 
