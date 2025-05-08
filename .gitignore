@@ -1,4 +1,6 @@
 #pycache
 __pycache__/
 *.pyc
-
+.venv/
+poetry.lock
+dist/

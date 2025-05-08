@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "codejson-index-generator"
+version = "1.0.0"
+description = "Script to create an indexed code.json for agencies."
+authors = ["Sachin Panyil <sachinpanayil01@gmail.com>"]
+license = "CC0 1.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pygithub = ">=1.59,<2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
