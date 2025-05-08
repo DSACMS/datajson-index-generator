@@ -57,7 +57,7 @@ class IndexGenerator:
     
         index['releases'].append(baseline)
 
-    def get_org_repos(self, org_name: str) -> List[Organization]:
+    def get_org_repos(self, org_name: str) -> list[Organization]:
         try:
             org = self.github.get_organization(org_name)
             print(f"\nProcessing organization: {org_name}")
@@ -71,18 +71,20 @@ class IndexGenerator:
 
     def save_organization_files(self, org_name: str, codeJSONPath) -> None:
         try:
+            org = self.github.get_organization(org_name)
             total_repos = self.get_org_repos(org_name)
 
             for id, repo in enumerate(org.get_repos(type='public'), 1):
                 print(f"\n Saving codeJSON for {repo.name} [{id}/{total_repos}]")
 
                 repoPath = os.path.join(codeJSONPath, (repo.name + '.json')) 
-                code_json = self.save_code_json(repoPath)
+                code_json = self.save_code_json(repo,repoPath)
         except GithubException as e:
             print(f"Error processing organization {org_name}: {str(e)}")
 
     def process_organization(self, org_name: str) -> None:
         try:
+            org = self.github.get_organization(org_name)
             total_repos = self.get_org_repos(org_name)
             
             for id, repo in enumerate(org.get_repos(type='public'), 1):
