@@ -6,6 +6,7 @@ import os
 from typing import Dict, Optional
 from github import Github, Repository, GithubException
 
+
 class IndexGenerator:
     def __init__(self, agency: str, verison: str, token: Optional[str] = None,):
         self.github = Github(token) if token else Github()
@@ -33,6 +34,18 @@ class IndexGenerator:
         except (json.JSONDecodeError, ValueError) as e:
             print(f"JSON Error: {str(e)}")
             return None
+    
+    def save_code_json(self, repo: Repository, output_path: str) -> Optional[str]:
+        
+        res = self.get_code_json(repo)
+        
+        if res:
+            with open(output_path, 'w') as f:
+                json.dump(res, f, indent=2)
+        else:
+            print(f"Error getting codejson file!")
+        
+        return res
 
     def update_index(self, index: Dict, code_json: Dict, org_name: str, repo_name: str) -> None:
         baseline = {
