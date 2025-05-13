@@ -41,6 +41,13 @@ Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COU
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/patsier-cms">
+                    <img src="https://avatars.githubusercontent.com/u/129543325?v=4" width="100;" alt="patsier-cms"/>
+                    <br />
+                    <sub><b>patsier-cms</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/decause-gov">
                     <img src="https://avatars.githubusercontent.com/u/107957201?v=4" width="100;" alt="decause-gov"/>
                     <br />
