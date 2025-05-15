@@ -23,7 +23,7 @@ class IndexGenerator:
 
     def get_code_json(self, repo: Repository) -> Optional[Dict]:
         try:
-            content = repo.get_contents("code.json", ref = "main")
+            content = repo.get_contents("code.json", ref = repo.default_branch)
         except GithubException as e:
             print(f"GitHub Error: {e.data.get('message', 'No message available')}")
             return None
