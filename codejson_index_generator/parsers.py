@@ -70,19 +70,9 @@ class IndexGenerator:
             raise e
 
     def save_organization_files(self, org_name: str, codeJSONPath) -> None:
-        try:
-            org = self.github.get_organization(org_name)
-            total_repos = self.get_org_repos(org_name)
+        raise NotImplementedError
 
-            for id, repo in enumerate(org.get_repos(type='public'), 1):
-                print(f"\n Saving codeJSON for {repo.name} [{id}/{total_repos}]")
-
-                repoPath = os.path.join(codeJSONPath, (repo.name + '.json')) 
-                code_json = self.save_code_json(repo,repoPath)
-        except GithubException as e:
-            print(f"Error processing organization {org_name}: {str(e)}")
-
-    def process_organization(self, org_name: str) -> None:
+    def process_organization(self, org_name: str, add_to_index=True, codeJSONPath=None) -> None:
         try:
             org = self.github.get_organization(org_name)
             total_repos = self.get_org_repos(org_name)
@@ -90,11 +80,16 @@ class IndexGenerator:
             for id, repo in enumerate(org.get_repos(type='public'), 1):
                 print(f"\nChecking {repo.name} [{id}/{total_repos}]")
                 
-                code_json = self.get_code_json(repo)
-                if code_json:
+                if not codeJSONPath:
+                    code_json = self.get_code_json(repo)
+                else:
+                    repoPath = os.path.join(codeJSONPath, (repo.name + '.json'))
+                    code_json = self.save_code_json(repo,repoPath)
+
+                if code_json and add_to_index:
                     print(f"✅ Found code.json in {repo.name}")
                     self.update_index(self.index, code_json, org_name, repo.name)
-                else:
+                elif not code_json:
                     print(f"❌ No code.json found in {repo.name}")
                     
         except GithubException as e:
