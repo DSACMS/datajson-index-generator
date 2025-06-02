@@ -1,19 +1,19 @@
 {
-  "name": "codejson-index-generator",
-  "description": "Script to create an indexed code.json",
-  "longDescription": "The GitHub Code.json Index Generator is a Python-based tool that helps federal agencies compile and maintain their code.json files for code.gov compliance. It automatically scans specified GitHub organizations, finds repositories containing code.json files, and combines them into a single indexed file.",
+  "name": "datajson-index-generator",
+  "description": "Script to create an indexed data.json",
+  "longDescription": "The data.json Index Generator is a Python-based tool that helps complie all data.json files that are found within user-sepcified Github organizations.",
   "status": "production",
   "permissions": {
     "licenses": [
       {
-        "URL": "https://github.com/DSACMS/codejson-index-generator/blob/main/LICENSE",
+        "URL": "https://github.com/DSACMS/datajson-index-generator/blob/main/LICENSE",
         "name": "CC0-1.0"
       }
     ],
     "usageType": "openSource"
   },
   "organization": "Centers for Medicare & Medicaid Services",
-  "repositoryURL": "https://github.com/DSACMS/codejson-index-generator",
+  "repositoryURL": "https://github.com/DSACMS/datajson-index-generator",
   "vcs": "git",
   "laborHours": 2764,
   "platforms": [
@@ -34,7 +34,7 @@
     "metaDataLastUpdated": "2025-02-11T21:20:49.144Z"
   },
   "tags": [
-    "codejson",
+    "datajson",
     "index",
     "generator",
     "tools"

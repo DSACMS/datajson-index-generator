@@ -1,18 +1,18 @@
-# codejson-index-generator
+# datajson-index-generator
 
-Script to create an indexed code.json for agencies.
+Script to create an indexed data.json for agencies.
 
 ## About the Project
 
-The GitHub Code.json Index Generator is a Python-based tool that helps federal agencies compile and maintain their code.json files for code.gov compliance. It automatically scans specified GitHub organizations, finds repositories containing code.json files, and combines them into a single indexed file.
+The data.json Index Generator is a Python-based tool that helps complie all data.json files that are found within user-sepcified Github organizations
 
 ### Project Vision
 
-To streamline the process of code.gov compliance for federal agencies by automating the collection and aggregation of code.json files across multiple GitHub organizations.
+To streamline the process of shoring up data.json files that live within the federal software ecosystem.
 
 ### Project Mission
 
-To provide agencies with a reliable, efficient tool for maintaining their code.gov inventory while reducing manual effort and potential for errors in the process.
+To provide agencies with a reliable, efficient tool for creating a data.gov inventory while reducing manual effort and potential for errors in the process.
 
 ## Core Team
 
@@ -54,7 +54,7 @@ The following guide is for members of the project team who have access to the re
 
 ```bash
 git clone ...
-cd codejson-index-generator
+cd datajson-index-generator
 ```
 
 2. Install required dependencies:
@@ -76,25 +76,23 @@ export GITHUB_KEY="your-token-here"
 The script can be run from the command line with the following options:
 
 ```bash
-python main.py --agency AGENCY_NAME --orgs "org1,org2" --output code.json --version VERSION_NUMBER
+python main.py --orgs "org1,org2" --output data-index.json
 ```
 
 > **_NOTE:_** _Seperate organizations by comma without any spaces!_
 
 ##### Required arguments:
 
-- `--agency`: The name of your agency
 - `--orgs`: Comma-separated list of GitHub organizations to scan
 
 ##### Optional arguments:
 
-- `--output`: Output filename (default: code.json)
-- `--version`: Code.json file version (default: 1.0.0)
+- `--output`: Output filename (default: data-index.json)
 
 ##### Example:
 
 ```bash
-python3 main.py --agency CMS --orgs "DSACMS,CMSgov,CMS-Enterprise" --output code.json --version 1.0.0
+python3 main.py --orgs "DSACMS,CMSgov,CMS-Enterprise" --output data-index.json
 ```
 
 ## Coding Style and Linters
