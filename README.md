@@ -4,7 +4,7 @@ Script to create an indexed data.json for agencies.
 
 ## About the Project
 
-The data.json Index Generator is a Python-based tool that helps complie all data.json files that are found within user-sepcified Github organizations
+The data.json Index Generator is a tool that helps compile all data.json files that are found within user-specified Github organizations. Available as both a user-friendly web interface and a powerful command-line tool.
 
 ### Project Vision
 
@@ -14,31 +14,26 @@ To streamline the process of shoring up data.json files that live within the fed
 
 To provide agencies with a reliable, efficient tool for creating a data.gov inventory while reducing manual effort and potential for errors in the process.
 
+
 ## Core Team
 
 An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAINERS.md). At this time, the project is still building the core team and defining roles and responsibilities. We are eagerly seeking individuals who would like to join the community and help us define and fill these roles.
 
-<!--
-## Documentation Index
+## Ways to Use
+### Webpage
 
-TODO: This is a like a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.
+For users who prefer more visual feedback and a cleaner UX.
 
-**{list of .md at top directory and descriptions}**
- -->
+### Command Line Interface
 
-<!--
-## Repository Structure
+For users who prefer terminal-based tools.
 
-TODO: Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.
+### Choose Your Method
 
-**{list directories and descriptions}**
-
--->
-
-<!--
-# Development and Software Delivery Lifecycle
-The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that external contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md).
--->
+| Method | Best For | Notes | 
+|--------|----------|------|
+| **Webpage** | Most users, one-time usage | No installation, user-friendly |
+| **CLI** | Automation, scripting, advanced users | Scriptable, CI/CD integration
 
 ## Local Development
 
@@ -53,7 +48,7 @@ The following guide is for members of the project team who have access to the re
 1. Clone the repository:
 
 ```bash
-git clone ...
+git clone https://github.com/DSACMS/datajson-index-generator.git
 cd datajson-index-generator
 ```
 
@@ -63,13 +58,13 @@ cd datajson-index-generator
 pip install -r requirements.txt
 ```
 
-1. Set up your GitHub Personal Access Token:
+3. Set up your GitHub Personal Access Token:
 
 ```bash
 export GITHUB_KEY="your-token-here"
 ```
 
-> **_NOTE:_** _Use of GitHub PAT is highly recommened due to rate limiting._
+> **_NOTE:_** _Use of GitHub PAT is highly recommended due to rate limiting._
 
 ### Usage
 
@@ -79,7 +74,7 @@ The script can be run from the command line with the following options:
 python main.py --orgs "org1,org2" --output data-index.json
 ```
 
-> **_NOTE:_** _Seperate organizations by comma without any spaces!_
+> **_NOTE:_** _Separate organizations by comma without any spaces!_
 
 ##### Required arguments:
 
@@ -128,7 +123,7 @@ The contents of this repository are managed by **{responsible organization(s)}**
 
 ## Community
 
-The codejson-index-generator team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
+The datajson-index-generator team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
 
 We know that we can learn from a wide variety of communities, including those who will use or will be impacted by the tool, who are experts in technology, or who have experience with similar technologies deployed in other spaces. We are dedicated to creating forums for continuous conversation and feedback to help shape the design and development of the tool.
 
