@@ -365,7 +365,11 @@ async function generateIndexJSON() {
             }
 
             if (repos && files) {
-                index['files'] = files
+                index['files'] = files.map(file => {
+                    // remove the temp metadata from before 
+                    const { _repoOwner, _repoName, ...cleanFile } = file
+                    return cleanFile
+                })
 
                 try {
                     downloadIndex(index)
@@ -520,7 +524,7 @@ async function fetchAllFiles(repositories, token, progressCallback, errorCallbac
                             ...Object.fromEntries(
                                 Object.entries(finalContent).filter(([key]) => key !== 'organization')
                             ),
-                            // used for display 
+                            // bug hacky fix since using the org and name above isnt working. temp metadata that will be deleted later
                             _repoOwner: repo.owner.login,    
                             _repoName: repo.name             
                         }
