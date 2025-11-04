@@ -12,7 +12,7 @@
       }
     ],
     "usageType": ["openSource"],
-    "exemptionText: ""
+    "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/datajson-index-generator",
