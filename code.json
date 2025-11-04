@@ -3,7 +3,7 @@
   "version": "",
   "description": "Script to create an indexed data.json",
   "longDescription": "The data.json Index Generator is a Python-based tool that helps complie all data.json files that are found within user-sepcified Github organizations.",
-  "status": "production",
+  "status": "Production",
   "permissions": {
     "licenses": [
       {
@@ -11,13 +11,13 @@
         "name": "CC0-1.0"
       }
     ],
-    "usageType": "openSource"
+    "usageType": ["openSource"]
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/datajson-index-generator",
   "repositoryHost": "github.com/DSACMS",
   "repositoryVisibility": "public",
-  "homepageURL": "",
+  "homepageURL": "https://dsacms.github.io/datajson-index-generator/",
   "downloadURL": "",
   "disclaimerURL": "",
   "disclaimerText": "",
@@ -65,13 +65,13 @@
   "feedbackMechanism": "https://github.com/DSACMS/datajson-index-generator/issues",
   "AIUseCaseID": "0",
   "localisation": false,
-  "repositoryType": "Tools",
+  "repositoryType": "tools",
   "userInput": true,
-  "fismaLevel": "Low",
+  "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
   "projects": [],
   "systems": [],
-  "subsetInHealthcare": "Operational",
-  "userType": "Government",
+  "subsetInHealthcare": ["operational"],
+  "userType": ["government"],
   "maturityModelTier": 3
 }
