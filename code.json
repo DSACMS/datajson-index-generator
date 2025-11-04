@@ -11,7 +11,8 @@
         "name": "CC0-1.0"
       }
     ],
-    "usageType": ["openSource"]
+    "usageType": ["openSource"],
+    "exemptionText: ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/datajson-index-generator",
