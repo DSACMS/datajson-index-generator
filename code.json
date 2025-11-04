@@ -1,5 +1,6 @@
 {
   "name": "datajson-index-generator",
+  "version": "",
   "description": "Script to create an indexed data.json",
   "longDescription": "The data.json Index Generator is a Python-based tool that helps complie all data.json files that are found within user-sepcified Github organizations.",
   "status": "production",
@@ -14,8 +15,18 @@
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/datajson-index-generator",
+  "repositoryHost": "github.com/DSACMS",
+  "repositoryVisibility": "public",
+  "homepageURL": "",
+  "downloadURL": "",
+  "disclaimerURL": "",
+  "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 2764,
+  "laborHours": 4165,
+  "reuseFrequency": {
+    "forks": 0,
+    "clones": 0
+  },
   "platforms": [
     "mac"
   ],
@@ -25,13 +36,21 @@
   ],
   "softwareType": "standalone/desktop",
   "languages": [
+    "JavaScript",
+    "CSS",
+    "HTML",
     "Python"
   ],
   "maintenance": "internal",
+  "contractNumber": [],
+  "SBOM": "https://github.com/DSACMS/datajson-index-generator/network/dependencies",
+  "relatedCode": [],
+  "reusedCode": [],
+  "partners": [],
   "date": {
-    "created": "2025-01-07T21:26:42Z",
-    "lastModified": "2025-02-11T21:19:29Z",
-    "metaDataLastUpdated": "2025-02-11T21:20:49.144Z"
+    "created": "2025-06-02T19:27:23Z",
+    "lastModified": "2025-11-04T18:21:13Z",
+    "metadataLastUpdated": "2025-11-04T18:23:08.642Z"
   },
   "tags": [
     "datajson",
@@ -43,13 +62,16 @@
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Program Office"
   },
+  "feedbackMechanism": "https://github.com/DSACMS/datajson-index-generator/issues",
+  "AIUseCaseID": "0",
   "localisation": false,
   "repositoryType": "Tools",
   "userInput": true,
   "fismaLevel": "Low",
   "group": "CMS/OA/DSAC",
+  "projects": [],
+  "systems": [],
   "subsetInHealthcare": "Operational",
   "userType": "Government",
-  "repositoryHost": "github.com/DSACMS",
   "maturityModelTier": 3
 }
