@@ -48,7 +48,12 @@
   "contractNumber": [],
   "SBOM": "https://github.com/DSACMS/datajson-index-generator/network/dependencies",
   "relatedCode": [],
-  "reusedCode": [],
+  "reusedCode": [
+    {
+      "name": "code.json Index Generator",
+      "URL": "https://github.com/DSACMS/codejson-index-generator"
+    }
+  ],
   "partners": [],
   "date": {
     "created": "2025-06-02T19:27:23Z",
