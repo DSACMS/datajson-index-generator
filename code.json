@@ -59,7 +59,8 @@
     "datajson",
     "index",
     "generator",
-    "tools"
+    "tools",
+    "featured"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
