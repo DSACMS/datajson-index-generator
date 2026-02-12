@@ -171,4 +171,21 @@ For more information and resources about SBOMs, visit: https://www.cisa.gov/sbom
 
 This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/) as indicated in [LICENSE](LICENSE).
 
-All contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.
+All contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest. 
+ ## Agency Mission 
+<!-- Provide the mission of the agency and how this project aligns. --> 
+ 
+ ## Team Mission 
+<!-- Provide the team's mission and how they work together. --> 
+ 
+ ## Documentation Index 
+<!-- TODO: This is a like a 'table of contents' for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide 'bookmark' or 'anchor' links to specific sections of your file to be referenced in tickets, docs, or other communication channels. --> 
+ **{list of .md at top directory and descriptions}** 
+ 
+ ## Repository Structure 
+<!-- TODO: Using the 'tree -d' command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time. --> 
+ <!--TREE START--><!--TREE END--> 
+ **{list directories and descriptions}** 
+ 
+ ## Development and Software Delivery Lifecycle 
+The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that external contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md). 
